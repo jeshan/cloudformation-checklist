@@ -19,7 +19,23 @@ class Analytics {
     details.forEach(detail => {
       const links = detail.querySelectorAll('a');
       links.forEach(link => {
-        link.setAttribute('href', link.href + '?ref=frontendchecklist');
+        const ref = 'ref=cloudformationchecklist';
+        let append = '';
+        let href = '';
+
+        if (link.href.indexOf('?') > 0) {
+          append = '&';
+        } else {
+          append = '?';
+        }
+        let hashAt = link.href.lastIndexOf('#');
+        if (hashAt < 0) {
+          href = link.href + append + ref;
+        } else {
+          href = link.href.substring(0, hashAt) + append + ref;
+          href += link.href.substring(hashAt);
+        }
+        link.setAttribute('href', href);
       });
     });
   }
