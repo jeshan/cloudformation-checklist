@@ -50,7 +50,7 @@ Resources:
                 - docker-compose build
                 - docker-compose up dist
                 - aws s3 sync dist/ s3://${DomainName}
-                - aws cloudfront create-invalidation --distribution-id ${Cdn}
+                - aws cloudfront create-invalidation --distribution-id ${Cdn} --paths "/*"
                 - sceptre --no-colour launch -y main
         GitCloneDepth: 1
         InsecureSsl: false
