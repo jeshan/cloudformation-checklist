@@ -1,0 +1,4 @@
+template_path: app.yaml
+
+parameters:
+  DomainName: {{stack_group_config.domain_name}}

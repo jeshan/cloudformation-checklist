@@ -1,0 +1,80 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'Deploys this website at cfnchecklist.com'
+
+Parameters:
+  DomainName:
+    Type: String
+
+Resources:
+  Bucket:
+    Properties:
+      AccessControl: Private
+      BucketName: !Ref DomainName
+      WebsiteConfiguration:
+        ErrorDocument: error.html
+        IndexDocument: index.html
+    Type: AWS::S3::Bucket
+
+  Certificate:
+    Properties:
+      DomainName: !Sub '*.${DomainName}'
+      DomainValidationOptions:
+        - DomainName: !Sub '*.${DomainName}'
+          ValidationDomain: !Ref Bucket
+      SubjectAlternativeNames:
+        - !Ref DomainName
+        - !Sub '*.${DomainName}'
+      ValidationMethod: DNS
+    Type: AWS::CertificateManager::Certificate
+
+  Cdn:
+    Properties:
+      DistributionConfig:
+        Aliases:
+          - !Ref Bucket
+        DefaultCacheBehavior:
+          AllowedMethods:
+            - GET
+            - HEAD
+          CachedMethods:
+            - GET
+            - HEAD
+          Compress: true
+          DefaultTTL: 86400
+          FieldLevelEncryptionId: ''
+          ForwardedValues:
+            Cookies:
+              Forward: all
+            QueryString: true
+          MaxTTL: 31536000
+          MinTTL: 86400
+          SmoothStreaming: false
+          TargetOriginId: !Sub www.${DomainName}-S3-origin
+          ViewerProtocolPolicy: redirect-to-https
+        DefaultRootObject: index.html
+        Enabled: true
+        HttpVersion: http2
+        IPV6Enabled: true
+        Origins:
+          - CustomOriginConfig:
+              HTTPPort: 80
+              HTTPSPort: 443
+              OriginKeepaliveTimeout: 5
+              OriginProtocolPolicy: http-only
+              OriginReadTimeout: 30
+              OriginSSLProtocols:
+                - SSLv3
+                - TLSv1
+            DomainName: !Sub www.${DomainName}.s3-website-us-east-1.amazonaws.com
+            Id: !Sub www.${DomainName}-S3-origin
+            OriginPath: ''
+        PriceClass: PriceClass_All
+        Restrictions:
+          GeoRestriction:
+            RestrictionType: none
+        ViewerCertificate:
+          AcmCertificateArn: !Ref Certificate
+          MinimumProtocolVersion: TLSv1
+          SslSupportMethod: sni-only
+        WebACLId: ''
+    Type: AWS::CloudFront::Distribution
