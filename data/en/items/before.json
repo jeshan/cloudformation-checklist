@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Reuse templates",
+    "priority": "High",
+    "description": "Don't reinvent the wheel; check online for vetted open-source templates",
+    "tools": [
+      {
+        "title": "widdix/aws-cf-templates",
+        "url": "https://github.com/widdix/aws-cf-templates"
+      },
+      {
+        "title": "awslabs/aws-cloudformation-templates",
+        "url": "https://github.com/awslabs/aws-cloudformation-templates"
+      },
+      {
+        "title": "stelligent/cloudformation_templates",
+        "url": "https://github.com/stelligent/cloudformation_templates"
+      },
+      {
+        "title": "AWS Quick Starts",
+        "url": "https://aws.amazon.com/quickstart"
+      },
+      {
+        "title": "Other templates on Github",
+        "url": "https://github.com/search?q=cloudformation+template"
+      }
+    ],
+    "tags": [
+      "all",
+      "before starting",
+      "github",
+      "reuse",
+      "community",
+      "high"
+    ]
+  }
+]

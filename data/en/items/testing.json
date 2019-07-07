@@ -1,0 +1,72 @@
+[
+  {
+    "title": "Verify Quotas for All Resource Types",
+    "priority": "Low",
+    "description": "To avoid hitting AWS api limits during CFN deployments",
+    "documentation": [
+      {
+        "title": "Explanation",
+        "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html?shortFooter=true#limits"
+      }
+    ],
+    "tools": [
+      {
+        "title": "AWS Service Quotas",
+        "url": "https://console.aws.amazon.com/servicequotas/home"
+      }
+    ],
+    "tags": [
+      "all",
+      "testing",
+      "low"
+    ]
+  },
+  {
+    "title": "Validate Templates Before Using Them",
+    "priority": "Low",
+    "description": "save time by catching syntax and semantic errors",
+    "documentation": [
+      {
+        "title": "Explanation",
+        "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html?shortFooter=true#validate"
+      }
+    ],
+    "tags": [
+      "all",
+      "testing",
+      "low"
+    ]
+  },
+  {
+    "title": "Lint your templates",
+    "priority": "Low",
+    "description": "To quickly catch typos, fast validations, if you're following certain best practices, etc",
+    "tools": [
+      {
+        "title": "cfn-python-lint",
+        "url": "https://github.com/aws-cloudformation/cfn-python-lint"
+      }
+    ],
+    "tags": [
+      "all",
+      "testing",
+      "low"
+    ]
+  },
+  {
+    "title": "Test your templates with TaskCat in your relevant regions",
+    "priority": "Low",
+    "description": "TaskCat deploys your AWS CloudFormation template in multiple AWS Regions and generates a report with a pass/fail grade for each region",
+    "documentation": [
+      {
+        "title": "Automated testing with TaskCat",
+        "url": "https://aws-quickstart.github.io/auto-testing.html"
+      }
+    ],
+    "tags": [
+      "all",
+      "testing",
+      "low"
+    ]
+  }
+]

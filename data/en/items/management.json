@@ -1,0 +1,104 @@
+[
+  {
+    "title": "Manage All Stack Resources Through AWS CloudFormation",
+    "priority": "High",
+    "description": "Doing so can create a mismatch between your stack's template and the current state of your stack resources, which can cause errors if you update or delete the stack",
+    "documentation": [
+      {
+        "title": "Reference",
+        "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html?shortFooter=true#donttouch"
+      }
+    ],
+    "tags": [
+      "all",
+      "management",
+      "high"
+    ]
+  },
+  {
+    "title": "Create Change Sets Before Updating Your Stacks",
+    "priority": "Low",
+    "description": "See how proposed changes might impact your resources to avoid accidents",
+    "documentation": [
+      {
+        "title": "Explanation",
+        "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html?shortFooter=true#cfn-best-practices-changesets"
+      }
+    ],
+    "tags": [
+      "all",
+      "management",
+      "low"
+    ]
+  },
+  {
+    "title": "Use Stack Policies",
+    "priority": "Medium",
+    "description": "protect critical stack resources from unintentional updates",
+    "documentation": [
+      {
+        "title": "Explanation",
+        "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html?shortFooter=true#stackpolicy"
+      }
+    ],
+    "tags": [
+      "all",
+      "management",
+      "medium"
+    ]
+  },
+  {
+    "title": "Use AWS CloudTrail to Log AWS CloudFormation Calls",
+    "priority": "Low",
+    "description": "To track api calls for auditing",
+    "documentation": [
+      {
+        "title": "Explanation",
+        "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html?shortFooter=true#cloudtrail"
+      }
+    ],
+    "tags": [
+      "all",
+      "management",
+      "low"
+    ]
+  },
+  {
+    "title": "Use a CFN launcher like Sceptre",
+    "priority": "Medium",
+    "description": "Helps manage templates at scale with your multiple accounts and regions. Check docs for more useful features",
+    "documentation": [
+      {
+        "title": "Sceptre docs",
+        "url": "https://sceptre.cloudreach.com/latest/index.html"
+      }
+    ],
+    "tags": [
+      "all",
+      "tools",
+      "management",
+      "medium"
+    ]
+  },
+  {
+    "title": "Automate drift detection",
+    "priority": "Low",
+    "description": "Important to catch unmanaged changes made outside of CloudFormation",
+    "documentation": [
+      {
+        "title": "Detecting Unmanaged Configuration Changes to Stacks and Resources",
+        "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html?shortFooter=true"
+      },
+      {
+        "title": "Automate drift detection with AWS Config",
+        "url": "https://docs.aws.amazon.com/config/latest/developerguide/cloudformation-stack-drift-detection-check.html?shortFooter=true"
+      }
+    ],
+    "tags": [
+      "all",
+      "management",
+      "automation",
+      "low"
+    ]
+  }
+]

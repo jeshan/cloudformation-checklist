@@ -1,0 +1,255 @@
+[
+  {
+    "title": "Essential DevOps tools",
+    "priority": "Medium",
+    "description": "Install these to work faster locally",
+    "tools": [
+      {
+        "title": "AWS CloudFormation plugin for JetBrains IDEs",
+        "url": "https://plugins.jetbrains.com/plugin/7371-aws-cloudformation"
+      },
+      {
+        "title": "CloudFormation support for Visual Studio Code",
+        "url": "https://marketplace.visualstudio.com/items?itemName=aws-scripting-guy.cform"
+      },
+      {
+        "title": "Cloudformation YAML Snippets for VS Code",
+        "url": "https://marketplace.visualstudio.com/items?itemName=dsteenman.cloudformation-yaml-snippets"
+      },
+      {
+        "title": "Snippets for other IDEs",
+        "url": "https://github.com/search?q=cloudformation+snippets"
+      },
+      {
+        "title": "cfn-python-lint IDE plugins",
+        "url": "https://github.com/aws-cloudformation/cfn-python-lint#editor-plugins"
+      }
+    ],
+    "tags": [
+      "all",
+      "tools",
+      "ide",
+      "medium"
+    ]
+  },
+  {
+    "title": "Prefer YAML over JSON",
+    "priority": "Low",
+    "description": "less verbosity, supports comments",
+    "tools": [
+      {
+        "title": "Use aws-cfn-template-flip to migrate to YAML",
+        "url": "https://github.com/awslabs/aws-cfn-template-flip"
+      }
+    ],
+    "tags": [
+      "all",
+      "template",
+      "low"
+    ]
+  },
+  {
+    "title": "Reuse snippets",
+    "priority": "Medium",
+    "description": "Reduce the guesswork; CloudFormation snippets available from AWS and on Github",
+    "documentation": [
+      {
+        "title": "Template Snippets",
+        "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/CHAP_TemplateQuickRef.html?shortFooter=true"
+      },
+      {
+        "title": "Cloudformation samples/snippets",
+        "url": "https://github.com/search?q=cloudformation+samples"
+      }
+    ],
+    "tags": [
+      "all",
+      "authoring",
+      "reuse",
+      "medium"
+    ]
+  },
+  {
+    "title": "Organise Your Stacks By Lifecycle and Ownership",
+    "priority": "High",
+    "description": "Putting all resources in too few stacks can become cumbersome",
+    "documentation": [
+      {
+        "title": "Explanation",
+        "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html?shortFooter=true#organizingstacks"
+      }
+    ],
+    "tags": [
+      "all",
+      "template",
+      "team",
+      "high"
+    ]
+  },
+  {
+    "title": "Use Cross-Stack References to Export Shared Resources",
+    "priority": "Low",
+    "description": "Decrease overhead to get a stack running",
+    "documentation": [
+      {
+        "title": "Explanation",
+        "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html?shortFooter=true#cross-stack"
+      }
+    ],
+    "tags": [
+      "all",
+      "template",
+      "low"
+    ]
+  },
+  {
+    "title": "Make templates reusable",
+    "priority": "Medium",
+    "description": "Reuse Templates to Replicate Stacks in Multiple Environments",
+    "documentation": [
+      {
+        "title": "Explanation",
+        "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html?shortFooter=true#reuse"
+      }
+    ],
+    "tags": [
+      "all",
+      "template",
+      "reuse",
+      "medium"
+    ]
+  },
+  {
+    "title": "Nested stacks",
+    "priority": "Low",
+    "description": "Use Nested Stacks to Reuse Common Template Patterns",
+    "documentation": [
+      {
+        "title": "Explanation",
+        "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html?shortFooter=true#nested"
+      }
+    ],
+    "tags": [
+      "all",
+      "template",
+      "low"
+    ]
+  },
+  {
+    "title": "Use AWS-Specific Parameter Types",
+    "priority": "Low",
+    "description": "For basic validation and some variable lookups",
+    "documentation": [
+      {
+        "title": "Explanation",
+        "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html?shortFooter=true#parmtypes"
+      }
+    ],
+    "tags": [
+      "all",
+      "template",
+      "low"
+    ]
+  },
+  {
+    "title": "Use Parameter Constraints",
+    "priority": "Low",
+    "description": "So as to clarify what inputs the user should be entering",
+    "documentation": [
+      {
+        "title": "Explanation",
+        "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html?shortFooter=true#parmconstraints"
+      }
+    ],
+    "tags": [
+      "all",
+      "template",
+      "low"
+    ]
+  },
+  {
+    "title": "Use AWS::CloudFormation::Init to Deploy Software Applications on Amazon EC2 Instances",
+    "priority": "Medium",
+    "description": "To make it declarative instead of procedural",
+    "documentation": [
+      {
+        "title": "Explanation",
+        "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html?shortFooter=true#cfninit"
+      }
+    ],
+    "tags": [
+      "all",
+      "template",
+      "ec2",
+      "medium"
+    ]
+  },
+  {
+    "title": "Experiment with the console first, then generate the templates/snippets",
+    "priority": "Medium",
+    "description": "To reduce the guesswork on how to get the resource definitions right, have a tool generate it accurately",
+    "tools": [
+      {
+        "title": "AWS Console Recorder (Records actions made in the AWS Management Console and outputs the equivalent CLI/SDK commands and CloudFormation/Terraform templates in your browser)",
+        "url": "https://github.com/iann0036/AWSConsoleRecorder"
+      },
+      {
+        "title": "Former2 (Generate CloudFormation / Terraform / Troposphere templates from your existing AWS resources in your browser)",
+        "url": "https://former2.com"
+      }
+    ],
+    "tags": [
+      "all",
+      "code generator",
+      "medium"
+    ]
+  },
+  {
+    "title": "Check resource lifecycle policies",
+    "priority": "High",
+    "description": "Be aware if/when your resources will get replaced by CFN to avoid surprises",
+    "documentation": [
+      {
+        "title": "AWS Resource and Property Types Reference",
+        "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html?shortFooter=true"
+      }
+    ],
+    "tags": [
+      "all",
+      "docs",
+      "high"
+    ]
+  },
+  {
+    "title": "Use custom resources to automate more of your infra",
+    "priority": "Low",
+    "description": "because AWS may not cover everything under CFN yet",
+    "documentation": [
+      {
+        "title": "Docs",
+        "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-custom-resources.html?shortFooter=true"
+      }
+    ],
+    "tags": [
+      "all",
+      "template",
+      "low"
+    ]
+  },
+  {
+    "title": "Use macros",
+    "priority": "Medium",
+    "description": "to reduce duplication, custom lookups, or any arbitrary code to transform template, etc",
+    "documentation": [
+      {
+        "title": "Docs",
+        "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html?shortFooter=true"
+      }
+    ],
+    "tags": [
+      "all",
+      "template",
+      "medium"
+    ]
+  }
+]

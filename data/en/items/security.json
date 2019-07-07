@@ -1,0 +1,53 @@
+[
+  {
+    "title": "Restrict IAM permissions",
+    "priority": "High",
+    "description": "Grant users only the permissions they need to work with CloudFormation",
+    "documentation": [
+      {
+        "title": "Use IAM to Control Access",
+        "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html?shortFooter=true#use-iam-to-control-access"
+      }
+    ],
+    "tags": [
+      "all",
+      "security",
+      "team",
+      "management",
+      "high"
+    ]
+  },
+  {
+    "title": "Do not embed credentials",
+    "priority": "High",
+    "description": "Use input parameters instead",
+    "documentation": [
+      {
+        "title": "Do Not Embed Credentials in Your Templates",
+        "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html?shortFooter=true#creds"
+      }
+    ],
+    "tags": [
+      "all",
+      "security",
+      "high"
+    ]
+  },
+  {
+    "title": "Statically analyse your templates with cfn_nag",
+    "priority": "Medium",
+    "description": "45+ rules to catch potential insecure infra and misconfigurations",
+    "documentation": [
+      {
+        "title": "stelligent/cfn_nag",
+        "url": "https://github.com/stelligent/cfn_nag"
+      }
+    ],
+    "tags": [
+      "all",
+      "tools",
+      "security",
+      "medium"
+    ]
+  }
+]

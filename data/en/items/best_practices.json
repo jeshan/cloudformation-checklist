@@ -1,0 +1,163 @@
+[
+  {
+    "title": "High availability practices",
+    "priority": "Medium",
+    "description": "",
+    "documentation": [
+      {
+        "title": "Link",
+        "url": "https://aws-quickstart.github.io/best-practices.html#ha"
+      }
+    ],
+    "tags": [
+      "all",
+      "medium"
+    ]
+  },
+  {
+    "title": "Security practices",
+    "priority": "High",
+    "description": "",
+    "documentation": [
+      {
+        "title": "Link",
+        "url": "https://aws-quickstart.github.io/best-practices.html#security"
+      }
+    ],
+    "tags": [
+      "all",
+      "security",
+      "high"
+    ]
+  },
+  {
+    "title": "Portability practices",
+    "priority": "Low",
+    "description": "",
+    "documentation": [
+      {
+        "title": "Link",
+        "url": "https://aws-quickstart.github.io/best-practices.html#port"
+      }
+    ],
+    "tags": [
+      "all",
+      "low"
+    ]
+  },
+  {
+    "title": "Managed Services practices",
+    "priority": "Low",
+    "description": "Some managed services that you should be using",
+    "documentation": [
+      {
+        "title": "Link",
+        "url": "https://aws-quickstart.github.io/best-practices.html#managed"
+      }
+    ],
+    "tags": [
+      "all",
+      "low"
+    ]
+  },
+  {
+    "title": "Custom Resources practices",
+    "priority": "Medium",
+    "description": "",
+    "documentation": [
+      {
+        "title": "Link",
+        "url": "https://aws-quickstart.github.io/best-practices.html#custom"
+      }
+    ],
+    "tags": [
+      "all",
+      "custom resources",
+      "medium"
+    ]
+  },
+  {
+    "title": "Linux practices",
+    "priority": "Medium",
+    "description": "",
+    "documentation": [
+      {
+        "title": "Link",
+        "url": "https://aws-quickstart.github.io/best-practices.html#linux"
+      }
+    ],
+    "tags": [
+      "all",
+      "ec2",
+      "medium"
+    ]
+  },
+  {
+    "title": "Windows practices",
+    "priority": "Medium",
+    "description": "",
+    "documentation": [
+      {
+        "title": "Link",
+        "url": "https://aws-quickstart.github.io/best-practices.html#windows"
+      }
+    ],
+    "tags": [
+      "all",
+      "ec2",
+      "medium"
+    ]
+  },
+  {
+    "title": "All platforms practices",
+    "priority": "Low",
+    "description": "",
+    "documentation": [
+      {
+        "title": "Link",
+        "url": "https://aws-quickstart.github.io/best-practices.html#all-plat"
+      }
+    ],
+    "tags": [
+      "all",
+      "all platforms",
+      "low"
+    ]
+  },
+  {
+    "title": "Template formatting practices",
+    "priority": "Low",
+    "description": "",
+    "documentation": [
+      {
+        "title": "Link",
+        "url": "https://aws-quickstart.github.io/best-practices.html#formatting"
+      }
+    ],
+    "tags": [
+      "all",
+      "template",
+      "low"
+    ]
+  },
+  {
+    "title": "Other practices (community)",
+    "priority": "Low",
+    "description": "Other practices that the community has come up with",
+    "documentation": [
+      {
+        "title": "alexgibs/cfnstyle",
+        "url": "https://github.com/alexgibs/cfnstyle"
+      },
+      {
+        "title": "toddm92/aws (Wiki: CloudFormation Best Practices)",
+        "url": "https://github.com/toddm92/aws/wiki/CloudFormation-Best-Practices"
+      }
+    ],
+    "tags": [
+      "all",
+      "community",
+      "low"
+    ]
+  }
+]
