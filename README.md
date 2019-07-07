@@ -51,14 +51,6 @@ If you want to show you are following the rules of the CloudFormation Checklist,
 
 **Open an issue or a pull request to suggest changes or additions.**
 
-### Guide
-
-The **CloudFormation Checklist** repository consists of two branches:
-
-#### 1. `master`
-
-This branch consists of the `README.md` file that is automatically reflected on the [CloudFormation Checklist](https://cfnchecklist.com) website.
-
 ## Authors
 
 Original checklist application author:
