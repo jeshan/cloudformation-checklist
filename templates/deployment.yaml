@@ -1,0 +1,106 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'Deploys this website at cfnchecklist.com'
+
+Parameters:
+  Cdn:
+    Type: String
+  DomainName:
+    Type: String
+  GithubRepo:
+    Type: String
+    Default: jeshan/cloudformation-checklist
+
+Resources:
+  DeployCfnChecklist:
+    Properties:
+      Artifacts:
+        Type: NO_ARTIFACTS
+      BadgeEnabled: false
+      Cache:
+        Modes:
+          - LOCAL_DOCKER_LAYER_CACHE
+          - LOCAL_SOURCE_CACHE
+        Type: LOCAL
+      EncryptionKey: !Sub 'arn:aws:kms:${AWS::Region}:${AWS::AccountId}:alias/aws/s3'
+      Environment:
+        ComputeType: BUILD_GENERAL1_SMALL
+        Image: aws/codebuild/docker:18.09.0
+        PrivilegedMode: true
+        Type: LINUX_CONTAINER
+      LogsConfig:
+        CloudWatchLogs:
+          GroupName: !Ref 'LogGroup'
+          Status: ENABLED
+      ServiceRole: !GetAtt 'Role.Arn'
+      Source:
+        BuildSpec: !Sub |-
+          version: 0.2
+
+          env:
+            variables:
+              LC_ALL: C.UTF-8
+              LANG: C.UTF-8
+
+          phases:
+            pre_build:
+              commands:
+                - pip3 install sceptre
+            build:
+              commands:
+                - docker-compose build
+                - docker-compose up dist
+                - aws s3 sync dist/ s3://${DomainName}
+                #- aws cloudfront create-invalidation --distribution-id ${Cdn}
+                - sceptre launch -y main
+        GitCloneDepth: 1
+        InsecureSsl: false
+        Location: !Sub https://github.com/${GithubRepo}
+        Type: GITHUB
+      TimeoutInMinutes: 10
+      Triggers:
+        Webhook: true
+        FilterGroups:
+          - - Type: EVENT
+              Pattern: PUSH
+            - Type: HEAD_REF
+              Pattern: '^refs/heads/master$'
+    Type: AWS::CodeBuild::Project
+
+  LogGroup:
+    Type: AWS::Logs::LogGroup
+
+  Role:
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+          - Action: sts:AssumeRole
+            Effect: Allow
+            Principal:
+              Service: codebuild.amazonaws.com
+        Version: '2012-10-17'
+      Policies:
+        - PolicyDocument:
+            Statement:
+              - Action:
+                  - logs:CreateLogGroup
+                  - logs:CreateLogStream
+                  - logs:DeleteLogGroup
+                  - logs:DescribeLogGroups
+                  - logs:PutLogEvents
+                Effect: Allow
+                Resource:
+                  - !Sub 'arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:*'
+              - Action:
+                  - s3:*
+                Effect: Allow
+                Resource:
+                  - !Sub arn:aws:s3:::${DomainName}
+                  - !Sub arn:aws:s3:::${DomainName}/*
+              - Action:
+                  - cloudformation:*
+                Effect: Allow
+                Resource:
+                  - !Sub arn:aws:cloudformation:${AWS::Region}:${AWS::AccountId}:stack/cloudformation-checklist-*
+            Version: '2012-10-17'
+          PolicyName: cfn-checklist-pol
+    Type: AWS::IAM::Role

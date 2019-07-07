@@ -92,3 +92,7 @@ Resources:
           SslSupportMethod: sni-only
         WebACLId: ''
     Type: AWS::CloudFront::Distribution
+
+Outputs:
+  DistributionId:
+    Value: !Ref Cdn

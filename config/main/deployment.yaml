@@ -1,0 +1,5 @@
+template_path: deployment.yaml
+
+parameters:
+  Cdn: !stack_output main/app.yaml::DistributionId
+  DomainName: {{stack_group_config.domain_name}}
