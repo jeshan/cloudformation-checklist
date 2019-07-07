@@ -1,7 +1,7 @@
 {
-  "name": "front-end-checklist",
+  "name": "cloudformation-checklist",
   "version": "0.0.1",
-  "description": "The perfect Front-End Checklist for modern websites and meticulous developers",
+  "description": "The checklist for meticulous AWS DevOps engineers",
   "scripts": {
     "start": "gulp dev",
     "build": "gulp build",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://thedaviddias@github.com/thedaviddias/Front-End-Checklist-App.git"
+    "url": "git+https://jeshan@github.com/jeshan/cloudformation-checklist.git"
   },
-  "author": "David Dias (thedaviddias@gmail.com)",
+  "author": "Jeshan G. Babooa (j@jeshan.co)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/thedaviddias/Front-End-Checklist-App/issues"
+    "url": "https://github.com/jeshan/cloudformation-checklist/issues"
   },
-  "homepage": "https://github.com/thedaviddias/Front-End-Checklist-App#readme",
+  "homepage": "https://github.com/jeshan/cloudformation-checklist#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-eslint": "^9.0.0",
