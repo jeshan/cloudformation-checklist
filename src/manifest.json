@@ -1,7 +1,7 @@
 {
-    "short_name": "FE Checklist",
-    "name": "Front-End Checklist",
-    "start_url": "http://frontendchecklist.com/?utm_source=homescreen",
+    "short_name": "CFN Checklist",
+    "name": "CloudFormation Checklist",
+    "start_url": "http://cfnchecklist.com/?utm_source=homescreen",
     "icons": [
       {
         "src": "/android-chrome-192x192.png",

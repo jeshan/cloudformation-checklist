@@ -3,7 +3,7 @@
 
 # TEAM
 
-    David Dias -- Front-End Developer -- @thedaviddias
+    Jeshan G. BABOOA -- Cloudformation Nerd -- @jeshan25
 
 # THANKS
 
