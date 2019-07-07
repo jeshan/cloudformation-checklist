@@ -1,0 +1,21 @@
+version: '3.4'
+
+services:
+  start:
+    command: ['start']
+    ports:
+      - 3000:3000
+      - 3001:3001
+    build:
+      context: .
+    volumes:
+      - ./data/en/items:/data/en/items
+      - ./data/en/project:/data/en/project
+      - ./src:/src
+
+  dist:
+    entrypoint: cp -r /app/dist /
+    build:
+      context: .
+    volumes:
+      - ./dist:/dist

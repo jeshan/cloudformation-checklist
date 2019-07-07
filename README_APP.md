@@ -17,6 +17,13 @@
 
 ## Install
 
+### Docker
+To run site locally: `docker-compose up --build start`, then open `http://localhost:3000` in your browser.
+
+To build site: `docker-compose up --build dist`. Deploy `dist` directory to your web server.
+
+### Other
+
 To install and run, open a terminal and use the following commands:
 
 ```shell
