@@ -26,8 +26,8 @@ See https://cfnchecklist.com
 All items in the **CloudFormation Checklist** are required for the majority of the projects, but some elements can be omitted or are not essential (in the case of an administration web app, you may not need RSS feed for example). We choose to use 3 levels of flexibility:
 
 * ![Low][low_img] means that the item is **recommended** but can be omitted in some particular situations.
-* ![Medium][medium_img] means that the item is **highly recommended** and can eventually be omitted in some really particular cases. Some elements, if omitted, can have bad repercussions in terms of performance or SEO.
-* ![High][high_img] means that the item **can't be omitted** by any reason. You may cause a dysfunction in your page or have accessibility or SEO issues. The testing priority needs to be on these elements first.
+* ![Medium][medium_img] means that the item is **highly recommended** and can eventually be omitted in some really particular cases. Omitting these that engineers may not work at full speed.
+* ![High][high_img] means that the item **can't be omitted** by any reason. You may risk security issues in your infra. The testing priority needs to be on these elements first.
 
 Some resources possess an emoticon to help you understand which type of content / help you may find on the checklist:
 
