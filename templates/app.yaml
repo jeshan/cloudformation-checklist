@@ -15,6 +15,20 @@ Resources:
         IndexDocument: index.html
     Type: AWS::S3::Bucket
 
+  BucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref Bucket
+      PolicyDocument:
+        Version: 2008-10-17
+        Statement:
+          - Sid: PublicReadWebsite
+            Effect: Allow
+            Principal:
+              AWS: '*'
+            Action: ['s3:GetObject']
+            Resource: !Sub 'arn:aws:s3:::${Bucket}/*'
+
   Certificate:
     Properties:
       DomainName: !Sub '*.${DomainName}'
@@ -49,7 +63,7 @@ Resources:
           MaxTTL: 31536000
           MinTTL: 86400
           SmoothStreaming: false
-          TargetOriginId: !Sub www.${DomainName}-S3-origin
+          TargetOriginId: !Sub ${DomainName}-S3-origin
           ViewerProtocolPolicy: redirect-to-https
         DefaultRootObject: index.html
         Enabled: true
@@ -65,8 +79,8 @@ Resources:
               OriginSSLProtocols:
                 - SSLv3
                 - TLSv1
-            DomainName: !Sub www.${DomainName}.s3-website-us-east-1.amazonaws.com
-            Id: !Sub www.${DomainName}-S3-origin
+            DomainName: !Sub ${DomainName}.s3-website-us-east-1.amazonaws.com
+            Id: !Sub ${DomainName}-S3-origin
             OriginPath: ''
         PriceClass: PriceClass_All
         Restrictions:
