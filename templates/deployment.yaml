@@ -101,6 +101,10 @@ Resources:
                 Effect: Allow
                 Resource:
                   - !Sub arn:aws:cloudformation:${AWS::Region}:${AWS::AccountId}:stack/cloudformation-checklist-*
+              - Action:
+                  - cloudfront:CreateInvalidation
+                Effect: Allow
+                Resource: '*'
             Version: '2012-10-17'
           PolicyName: cfn-checklist-pol
     Type: AWS::IAM::Role
