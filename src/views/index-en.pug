@@ -12,48 +12,38 @@ block main
     if _items !== undefined
 
       +checklist-section({
-        dataSection: _items.head,
-        sectionTitle: "Head"
+        dataSection: _items.before,
+        sectionTitle: "Before"
       })
 
       +checklist-section({
-        dataSection: _items.html,
-        sectionTitle: "HTML"
+        dataSection: _items.authoring,
+        sectionTitle: "Authoring"
       })
 
       +checklist-section({
-        dataSection: _items.webfonts,
-        sectionTitle: "Webfonts"
+        dataSection: _items.security,
+        sectionTitle: "Security"
       })
 
       +checklist-section({
-        dataSection: _items.css,
-        sectionTitle: "CSS"
+        dataSection: _items.best_practices,
+        sectionTitle: "Practices"
       })
 
       +checklist-section({
-        dataSection: _items.javascript,
-        sectionTitle: "JavaScript"
+        dataSection: _items.management,
+        sectionTitle: "Management"
       })
 
       +checklist-section({
-        dataSection: _items.images,
-        sectionTitle: "Images"
+        dataSection: _items.team,
+        sectionTitle: "Team"
       })
 
       +checklist-section({
-        dataSection: _items.accessibility,
-        sectionTitle: "Accessibility"
-      })
-
-      +checklist-section({
-        dataSection: _items.performance,
-        sectionTitle: "Performance"
-      })
-
-      +checklist-section({
-        dataSection: _items.seo,
-        sectionTitle: "SEO"
+        dataSection: _items.testing,
+        sectionTitle: "Testing"
       })
 
   include components/s-section-bottom
