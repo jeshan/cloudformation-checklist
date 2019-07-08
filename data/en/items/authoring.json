@@ -120,22 +120,6 @@
     ]
   },
   {
-    "title": "Nested stacks",
-    "priority": "Low",
-    "description": "Use Nested Stacks to Reuse Common Template Patterns",
-    "documentation": [
-      {
-        "title": "Explanation",
-        "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html?shortFooter=true#nested"
-      }
-    ],
-    "tags": [
-      "all",
-      "template",
-      "low"
-    ]
-  },
-  {
     "title": "Use AWS-Specific Parameter Types",
     "priority": "Low",
     "description": "For basic validation and some variable lookups",
