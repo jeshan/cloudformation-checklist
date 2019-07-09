@@ -6,7 +6,7 @@
 <h4 align="center">The CloudFormation Checklist is a list of all elements you need to have / to test before launching your infra to production.</h4>
 
 <p align="center">
-  <a href="#how-to-use">How To Use</a> • <a href="#contributing">Contributing</a> • <a href="https://frontendchecklist.io">Website</a> • <a href="https://www.producthunt.com/posts/front-end-checklist">Product Hunt</a>
+  <a href="#how-to-use">How To Use</a> • <a href="#contributing">Contributing</a>
 </p>
 <p align="center">
     <span>Inspired by the Front-end Checklist</span>
