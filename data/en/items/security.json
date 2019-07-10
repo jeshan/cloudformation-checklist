@@ -41,6 +41,10 @@
       {
         "title": "stelligent/cfn_nag",
         "url": "https://github.com/stelligent/cfn_nag"
+      },
+      {
+        "title": "List of rules",
+        "url": "https://github.com/stelligent/cfn_nag/tree/master/lib/cfn-nag/custom_rules"
       }
     ],
     "tags": [
