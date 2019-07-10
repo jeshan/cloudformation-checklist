@@ -2,7 +2,7 @@
   {
     "title": "Reuse templates",
     "priority": "High",
-    "description": "Don't reinvent the wheel; check online for vetted open-source templates",
+    "description": "Don't reinvent the wheel; check these tools for vetted open-source templates",
     "tools": [
       {
         "title": "widdix/aws-cf-templates",
