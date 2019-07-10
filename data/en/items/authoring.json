@@ -5,6 +5,10 @@
     "description": "Install these to work faster locally",
     "tools": [
       {
+        "title": "Typeformation plugin for JetBrains IDEs",
+        "url": "https://plugins.jetbrains.com/plugin/10653-typeformation"
+      },
+      {
         "title": "AWS CloudFormation plugin for JetBrains IDEs",
         "url": "https://plugins.jetbrains.com/plugin/7371-aws-cloudformation"
       },
