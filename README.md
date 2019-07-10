@@ -44,7 +44,7 @@ If you want to show you are following the rules of the CloudFormation Checklist,
 ➔ [![CloudFormation_Checklist followed](https://img.shields.io/badge/CloudFormation_Checklist-followed-brightgreen.svg)](https://github.com/jeshan/cloudformation-checklist/)
 
 ```md
-[![Front‑End_Checklist followed](https://img.shields.io/badge/Front‑End_Checklist-followed-brightgreen.svg)](https://github.com/jeshan/cloudformation-checklist/)
+[![CloudFormation_Checklist followed](https://img.shields.io/badge/Front‑End_Checklist-followed-brightgreen.svg)](https://github.com/jeshan/cloudformation-checklist/)
 ```
 
 ## Contributing
