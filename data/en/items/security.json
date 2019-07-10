@@ -36,7 +36,7 @@
   {
     "title": "Statically analyse your templates with cfn_nag",
     "priority": "Medium",
-    "description": "45+ rules to catch potential insecure infra and misconfigurations",
+    "description": "45+ rules to catch potential insecure infra and misconfiguration",
     "documentation": [
       {
         "title": "stelligent/cfn_nag",
