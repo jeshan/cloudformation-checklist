@@ -59,12 +59,12 @@ class Checkboxes {
 
       // Update progress bar
       new ProgressBar().updateProgressBar(section, nbrItemsChecked);
+      item.setAttribute('data-item-check', 'true');
       new Notation().updateNotation();
 
       new Utils().visibityEl(item, '.c-tags', 'hide');
       new Utils().visibityEl(item, '.js-dropdown', 'hide');
 
-      item.setAttribute('data-item-check', 'true');
 
       new Notation().updatePriority();
 
