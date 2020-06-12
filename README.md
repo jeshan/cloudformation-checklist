@@ -64,6 +64,16 @@ Original checklist application author:
 Modified for AWS CloudFormation:
 **[Jeshan G. BABOOA](https://github.com/jeshan)**
 
+## Infrastructure
+The website is a static one deployed on AWS. Contents are stored in Amazon S3 while CloudFront cdn is used to deliver the contents. This is how the stack is:
+
+![](/diagram-app.png)
+
+This is how the deployment pipeline has been set up:
+
+![](/diagram-deployment.png)
+
+
 ## License
 
 [![CC0](https://i.creativecommons.org/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
